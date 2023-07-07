@@ -140,14 +140,20 @@ nav ul li a {
     height: 100px;
     background-color: #a04;
 }
+.top-headlines .right .top-news .news .img img{
+    width: 100%;
+    height: 100%;
+}
 .top-headlines .right .top-news .news .text {
     margin-inline: 10px;
 }
-.top-headlines .right .top-news .news .text .title {
+.top-headlines .right .top-news .news .text .title a {
     cursor: pointer;
     display: inline;
+    color: #f0f0f0;
+    text-decoration: none;
 }
-.top-headlines .right .top-news .news .text .title:hover {
+.top-headlines .right .top-news .news .text .title a:hover {
     text-decoration: underline;
 }
 /* Page 2 */
@@ -174,30 +180,30 @@ nav ul li a {
 }
 .page2 .news .news-box {
     width: 100%;
-    background-color: #999;
     margin-top: 20px;
     display: flex;
 }
 .page2 .news .news-box .news-card {
     width: calc(100% / 5 - 20px); /* 20px is the margin given to each card*/
-    background-color: #070;
     margin: 10px;
 }
-.page2 .news .news-box .news-card .img {
+.page2 .news .news-box .news-card img {
     width: 100%;
     height: 150px;
-    background-color: #a04;
 }
 .page2 .news .news-box .news-card .text {
     padding: 10px;
 }
-.page2 .news .news-box .news-card .text .title p {
+.page2 .news .news-box .news-card .text .title a {
     font-size: 15px;
     display: inline;
     cursor: pointer;
+    color: #f0f0f0;
+    text-decoration: none;
 }
-.page2 .news .news-box .news-card .title p:hover {
+.page2 .news .news-box .news-card .text .title a:hover {
     text-decoration: underline;
 }
+
 
 
