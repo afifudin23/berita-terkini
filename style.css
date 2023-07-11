@@ -10,6 +10,7 @@ body {
     width: 100%;
     min-height: 100vh;
     color: #fff;
+    
 }
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -205,5 +206,11 @@ nav ul li a {
     text-decoration: underline;
 }
 
-
+// footer
+.footer .box {
+    width: 100px;
+    height: 1000px;
+    background-color: green;
+    
+}
 
