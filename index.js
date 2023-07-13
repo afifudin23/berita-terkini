@@ -7,6 +7,16 @@ const healthNews = document.querySelector("#health .news-box");
 const businessNews = document.querySelector("#business .news-box");
 const sportsNews = document.querySelector("#sports .news-box");
 const technologyNews = document.querySelector("#technology .news-box");
+const header = document.getElementsByTagName("header")[0];
+
+// making header sticky
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50){
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+})
 
 // fetchimg news data from website data
 const apiKey = "5c6ae400ed564f22a61c2af155db00c2";
