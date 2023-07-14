@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
 })
 
 // fetchimg news data from website data
-const apiKey = "5c6ae400ed564f22a61c2af155db00c2";
+const apiKey = "8ecc17b24e804a35834a552d95e6c49d";
 
 const fetchDataNews = async (category, pageSize) => {
     try {
@@ -38,14 +38,13 @@ fetchDataNews("business", 5).then((data) => {
     breakingImg.innerHTML = `<img src="${data[0].urlToImage}" alt="Breaking Image" />`;
     breakingNewsTitle.innerHTML = `<a href="${data[0].url}" target="_blank" ><h2>${data[0].title}</h2></a>`;
     breakingNewsDesc.innerHTML = data[0].description;
-    console.log(data);
 });
 
 // adding top headlines
 fetchDataNews("general", 20).then((data) => {
     let html = "";
     let title = "";
-    data.map(e => {
+    data.map((e) => {
         if (e.title.length < 70){
             title = e.title;
         } else {
