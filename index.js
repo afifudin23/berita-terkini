@@ -8,6 +8,15 @@ const businessNews = document.querySelector("#business .news-box");
 const sportsNews = document.querySelector("#sports .news-box");
 const technologyNews = document.querySelector("#technology .news-box");
 const header = document.getElementsByTagName("header")[0];
+const navbar = document.querySelector("nav .bar");
+const menu = document.querySelector("nav ul");
+
+
+// make toggle Navbar
+navbar.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    menu.classList.toggle("active-menu");
+});
 
 // making header sticky
 window.addEventListener("scroll", () => {
@@ -45,10 +54,10 @@ fetchDataNews("general", 20).then((data) => {
     let html = "";
     let title = "";
     data.map((e) => {
-        if (e.title.length < 70){
+        if (e.title.length < 100){
             title = e.title;
         } else {
-            title = e.title.slice(0, 70) + "...";
+            title = e.title.slice(0, 100) + "...";
         }
         html += `<div class="news">
                     <div class="img"><img src="${e.urlToImage}" alt="top image" /></div>

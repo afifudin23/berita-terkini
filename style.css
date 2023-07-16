@@ -53,6 +53,24 @@ header.sticky {
 nav ul {
     display: flex;
 }
+
+nav .bar {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+    right: 50px;
+    bottom: 29px;
+} 
+nav .bar.active .open {
+    display: none;
+}
+nav .bar .close {
+    display: none;
+}
+nav .bar.active .close {
+    display: initial;
+}
 nav ul li {
     list-style: none;
     margin: 0 15px;
@@ -140,6 +158,7 @@ nav ul li a {
     grid-template-columns: auto auto;
     align-items: center;
     margin-bottom: 12px;
+    padding-right: 14px;
 }
 .top-headlines .right .top-news .news .img {
     width: 170px;
@@ -190,6 +209,7 @@ nav ul li a {
     width: 100%;
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 .page2 .news .news-box .news-card {
     width: calc(100% / 5 - 20px); /* 20px is the margin given to each card*/
@@ -230,7 +250,6 @@ footer {
 footer .box {
     width: 100%;
     height: 100%;
-    display: grid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
@@ -367,5 +386,57 @@ footer .copyrights {
     footer .copyrights {
         font-size: 17px;
     }
+}
+@media (max-width:840px) {
     
+    nav .bar {
+        display: block;
+    }
+    nav ul {
+        opacity: 0;
+        font-size: 17px;
+        position: absolute;
+        width: 227px;
+        background-color: #0b0b11;
+        color: #fff;
+        flex-direction: column;
+        right: -210px;
+        padding: 21px 20px;
+        text-align: center;
+        font-weight: 500;
+        top: 71px;
+        border-radius: 0 0 10px 10px;
+        transition: 0.3s
+    }
+    nav ul li {
+        height: 34px;
+        margin: 15px;
+        padding-top: 6px;
+    }
+    nav ul.active-menu {
+        opacity: 1;
+        right: 0;
+    }
+    .top-headlines {
+        display: block;
+    }
+    .top-headlines .right .top-news .news .img {
+        width: 200px;
+    }
+    .top-headlines .right .top-news .news .text .title a {
+        font-size: 19px;
+    }
+    .page2 .news .news-box .news-card {
+        width: calc(100% / 3 - 20px);
+    }
+    .page2 .news .news-box .news-card .text .title a {
+        font-size: 17px;
+    }
+    .footer .box {
+        grid-template-columns: none;
+    }
+    .footer .box .right {
+        grid-row-start: 1;
+        font-size: 40px;
+    }
 }
