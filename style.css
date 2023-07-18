@@ -135,7 +135,7 @@ nav ul li a {
     margin-top: 10px;
 }
 .top-headlines .right {
-    width: 1005;
+    width: 100%;
     height: 500px;
     padding: 10px;
 }
@@ -502,8 +502,78 @@ footer .copyrights {
     }
 }
 @media (max-width:470px) {
+    header .logo {
+        font-size: 32px;
+    }
+    nav .bar {
+        font-size: 24px;
+        bottom: 25px;
+    }
+    .top-headlines .left .text .title a h2 {
+        font-size: 20px;
+    }
+    .top-headlines .left .text .description {
+        font-size: 13px;
+    }
+    .top-headlines .right .top-news .news .img {
+        width: 160px;
+    }
+    .top-headlines .right .top-news .news .text .title a {
+        font-size: 14px;
+    }  
+    .page2 .news > .title h2 {
+        font-size: 35px;
+    }  
     .page2 .news .news-box .news-card .img {
         height: 185px;
     }
+    footer .box .right .newsletter p {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    footer .box .right .newsletter .email input {
+        width: 260px;
+        padding: 0px 13px
+    }
     
+}
+@media (max-width:410px) {
+    .top-headlines {
+        padding: 85px 0px 50px;
+    }
+    .top-headlines .left {
+        padding: 10px 0px 35px;
+    }
+    .top-headlines .left .img {
+        height: 280px;
+    }
+    .top-headlines .right {
+        padding: 27px;
+    }
+    .page2 {
+        padding: 50px 35px;
+    }
+    .page2 .news {
+        padding: 20px 0;
+        margin-bottom: 35px;
+    }
+    footer .box .left {
+        justify-content: space-between;    
+    }
+    footer .box .left .categories div p {
+        font-size: 16px;
+    }
+    footer .box .left .contact-us .contact div {
+        font-size: 15px;
+    }
+    footer .box .right {
+        margin-bottom: 50px;
+    }
+    footer .box .right .newsletter .email {
+        height: 38px;
+    }
+    footer .box .right .newsletter .email input {
+        width: 215px;
+    }
+
 }
