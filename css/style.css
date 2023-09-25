@@ -555,6 +555,10 @@ footer .copyrights {
     .top-headlines .left .text .title a h2 {
         font-size: 26px;
     }
+    .top-headlines .left .text .description {
+        font-size: 14px;
+        text-align: justify;
+    }
     .top-headlines .right {
         padding: 27px;
     }
